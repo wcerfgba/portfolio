@@ -9,45 +9,45 @@
       * { box-sizing: border-box; }
 
       html {
-        font-size: 2vw;
+        font-size: 4vw;
         font-family: 'Lato', sans-serif;
         line-height: 1.3;
         color: #333;
         background: #fcfcfc;
+        height: 100%;
+      }
+
+      @media (min-width: 1024px) {
+        html {
+          font-size: 2vw;
+        }
       }
 
       body {
         margin: 0;
+        height: 100%;
       }
 
-      html * {
-        font-size: 2rem;
-      }
-
-      @media (min-width: 1024px) {
-        html * {
-          font-size: 1rem;
-        }
-      }
+      h1 { font-size: 3rem; }
+      h2 { font-size: 1.5rem; }
+      p  { font-size: 1rem; }
 
       .slice {
-        padding: 10rem 1.5rem;
+        padding: 3% 3vw;
+        height: 100%;
       }
 
       .my-card {
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
       .my-card h1 {
-        font-size: 4rem;
         margin: 0 0 1rem;
       }
 
       .my-card h2 {
-        font-size: 2rem;
         font-weight: normal;
         margin: 0;
         color: #555;
@@ -61,27 +61,33 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* margin: 20vh 1.5rem; ??? */
       }
 
       .portfolio {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: center;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        margin: 0 -0.5rem;
+      .portfolio > * { margin-bottom: 1rem; }
+      .portfolio > *:last-child { margin-bottom: 0; }
+
+      @media (min-width: 800px) {
+        .portfolio {
+          flex-direction: row;
+        }
+
+        .portfolio > * { margin-right: 1rem; }
+        .portfolio > *:last-child { margin-right: 0; }
       }
 
       .portfolio .squares {
-        flex: 1 0;
-        min-width: 360px;
+        flex: 1;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: flex-start;
         align-content: flex-start;
-        margin: 0.5rem;
       }
 
       .portfolio .squares .square {
@@ -93,7 +99,6 @@
 
       .portfolio .lines {
         flex: 1;
-        margin: 0.5rem;
       }
 
       .portfolio .lines ul {
@@ -114,9 +119,37 @@
       }
 
       .contact {
-        height: 100vh;
         background: #333;
         color: #eee;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .contact h2 {
+        font-weight: normal;
+        margin: 0 0 1rem 0;
+      }
+
+      .contact textarea {
+        margin: 0 0 1rem 0;
+        border: none;
+        background: #444;
+        color: #eee;
+        width: 100%;
+        max-width: 1024px;
+        height: 20%;
+        font-family: 'Lato', sans-serif;
+      }
+
+      .contact input[type="submit"] {
+        margin: 0 0 1rem 0;
+        border: none;
+        background: #444;
+        color: #eee;
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
       }
     </style>
   </head>
@@ -132,27 +165,31 @@
       <p>This is me, saying some words about myself. I need to talk about all the stuff I do, why I'm so cool, what my philosophy is. Y'know, portfolio stuff. </p>
     </div>
     <div class="slice portfolio">
-      <div class="squares">
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-      </div>
-      <div class="lines">
-        <ul>
-          <li><span class="date">2019-09-99</span> Something here</li>
-          <li><span class="date">2019-09-99</span> Something here</li>
-          <li><span class="date">2019-09-99</span> Something here</li>
-          <li><span class="date">2019-09-99</span> Something here</li>
-          <li><span class="date">2019-09-99</span> Something here</li>
-        </ul>
+      <div class="portfolio">
+        <div class="squares">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="lines">
+          <ul>
+            <li><span class="date">2019-09-99</span> Something here</li>
+            <li><span class="date">2019-09-99</span> Something here</li>
+            <li><span class="date">2019-09-99</span> Something here</li>
+            <li><span class="date">2019-09-99</span> Something here</li>
+            <li><span class="date">2019-09-99</span> Something here</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="slice contact">
-      
+      <h2>Contact</h2>
+      <textarea name="" id="" placeholder="Message... (don't forget contact details!)"></textarea>
+      <input type="submit" value="Send">
     </div>
   </body>
 </html>
