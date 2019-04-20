@@ -9,7 +9,7 @@
       * { box-sizing: border-box; }
 
       html {
-        font-size: 4vw;
+        font-size: 6vw;
         font-family: 'Lato', sans-serif;
         line-height: 1.3;
         color: #333;
@@ -17,9 +17,33 @@
         height: 100%;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 400px) {
+        html {
+          font-size: 5vw;
+        }
+      }
+
+      @media (min-width: 500px) {
+        html {
+          font-size: 4vw;
+        }
+      }
+
+      @media (min-width: 666px) {
+        html {
+          font-size: 3vw;
+        }
+      }
+
+      @media (min-width: 1000px) {
         html {
           font-size: 2vw;
+        }
+      }
+
+      @media (min-width: 2000px) {
+        html {
+          font-size: 1vw;
         }
       }
 
@@ -28,13 +52,21 @@
         height: 100%;
       }
 
-      h1 { font-size: 3rem; }
-      h2 { font-size: 1.5rem; }
+      /* Keep p at 1rem but start at 0.9rem basis before creating the scale, 
+         so we bring all the headings down but preserve proportions. */
+      h1 { font-size: 2.025rem; }
+      h2 { font-size: 1.35rem; }
       p  { font-size: 1rem; }
+
+      @media (min-width: 400px) {
+        h1 { font-size: 2.25rem; }
+        h2 { font-size: 1.5rem; }
+        p  { font-size: 1rem; }
+      }
 
       .slice {
         padding: 3% 3vw;
-        height: 100%;
+        height: 110%;
       }
 
       .my-card {
@@ -72,8 +104,9 @@
       .portfolio > * { margin-bottom: 1rem; }
       .portfolio > *:last-child { margin-bottom: 0; }
 
-      @media (min-width: 800px) {
+      @media (min-width: 1000px) {
         .portfolio {
+          flex: 1;
           flex-direction: row;
         }
 
@@ -139,8 +172,9 @@
         color: #eee;
         width: 100%;
         max-width: 1024px;
-        height: 20%;
+        height: 5em;
         font-family: 'Lato', sans-serif;
+        font-size: 1rem;
       }
 
       .contact input[type="submit"] {
@@ -188,7 +222,10 @@
     </div>
     <div class="slice contact">
       <h2>Contact</h2>
-      <textarea name="" id="" placeholder="Message... (don't forget contact details!)"></textarea>
+      <textarea name="" id="" placeholder="Hi John,
+Could you email me at myemail@place.net?
+Thanks,
+Bill"></textarea>
       <input type="submit" value="Send">
     </div>
   </body>
