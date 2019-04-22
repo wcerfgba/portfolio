@@ -49,6 +49,13 @@
             >
               <p>This is some stuff about this project</p>
             </portfolio-square>
+            <portfolio-square
+              title="p5.js Canvas"
+              :icon="require('./assets/p5jscanvas-icon.png')"
+              :photo="require('./assets/p5jscanvas-photo.png')"
+            >
+              <p>This is some stuff about this project</p>
+            </portfolio-square>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>

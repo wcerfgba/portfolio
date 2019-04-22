@@ -1,21 +1,39 @@
-## Content
+## To clean
 
+* p5.js Canvas
+* I CAN FEEL
+
+
+
+## To write
+
+* Personal statement 
 * Real Users Club
 * Mona Lisa in Rectangles
 * Gradient Resonance
-* I CAN FEEL
+* steep
+
+
+
+## To add
+
 * HebrewTime
 * Poetry
-* bytebeat
-* photography (take photos)
-* Recipes (need to write up)
-* git-matrix (needs some love and promotion!!!)
-* p5js-canvas (likewise)
-* Navvies' Barge (when live)
-* gridball (likewise, but needs mooore looove)
-* easysampler (needs mad love)
-* slink (dead, still cool)
 * aesthetic css (memes)
+* slink (dead, still cool)
+
+
+
+## To develop
+* photography
+* bytebeat
+* Recipes (need to write up)
+* git-matrix (needs a rebuild!)
+* Navvies' Barge (when live)
+* gridball (needs looove)
+* easysampler (needs mad love)
+
+
 
 
 ## Inspiration
