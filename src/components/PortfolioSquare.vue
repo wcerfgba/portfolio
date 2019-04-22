@@ -9,8 +9,11 @@
           <div class="photo">
             <img :src="photo">
           </div>
-          <div class="close">
-            <span @click="doClose">×</span>
+          <div class="close" @click="doClose">
+            <svg viewBox="0 0 12 12">
+              <path d="M0,0l12,12z" />
+              <path d="M0,12l12,-12z" />
+            </svg>
           </div>
           <div class="description">
             <h2 class="title">{{ title }}</h2>
@@ -59,8 +62,26 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: rgba(0, 0, 0, 0.01); */
-    /* filter: blur(3px); */
+  }
+
+  .close {
+    position: absolute;
+    top: unset;
+    bottom: 12rem;
+    right: 0;
+    height: 1rem;
+    width: 1rem;
+    margin: 1.1rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .close svg {
+    stroke: #888;
+  }
+
+  .title {
+    margin: 0;
   }
 
   .page {
@@ -70,6 +91,7 @@ export default {
     box-shadow: 5px 5px 15px #0002;
     overflow: hidden;
     max-width: 60rem;
+    height: calc(100% - 2rem);
   }
 
   .photo {
@@ -81,36 +103,35 @@ export default {
     height: 100%;
   }
 
-  .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 1rem;
-    width: 1rem;
-    margin: 0.5rem;
-    z-index: 2;
-  }
-
-  .close span {
-    cursor: pointer;
-    color: #888;
-  }
-
   .description {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: unset;
+    left: 0;
     bottom: 0;
-    width: 20rem;
-    float: right;
-    padding: 1rem;
-    padding: 2rem 1rem;
-    height: 100%;
+    right: 0;
+    width: 100%;
+    height: 15rem;
+    padding: 2.4rem 1.8rem;
     box-shadow: 0 0 10px #0002;
     background: #fcfcfc;
+    overflow: scroll;
   }
 
-  .title {
-    margin: 0;
+  @media (min-width: 800px) {
+    .description {
+      top: 0;
+      left: unset;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 20rem;
+      padding: 2.8rem;
+    }
+
+    .close {
+      top: 0;
+      bottom: unset;
+      margin: 1rem;
+    }
   }
 </style>
