@@ -42,6 +42,13 @@
             >
               <p>This is some stuff about this project</p>
             </portfolio-square>
+            <portfolio-square
+              title="I CAN FEEL"
+              :icon="require('./assets/feel-icon.png')"
+              :photo="require('./assets/feel-photo.png')"
+            >
+              <p>This is some stuff about this project</p>
+            </portfolio-square>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
