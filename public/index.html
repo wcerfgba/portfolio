@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>portfolio</title>
+    <style>
+      * { box-sizing: border-box; }
+
+      html {
+        font-size: 6vw;
+        font-family: 'Lato', sans-serif;
+        line-height: 1.3;
+        color: #333;
+        background: #fcfcfc;
+        height: 100%;
+      }
+
+      @media (min-width: 400px) {
+        html {
+          font-size: 5vw;
+        }
+      }
+
+      @media (min-width: 500px) {
+        html {
+          font-size: 4vw;
+        }
+      }
+
+      @media (min-width: 666px) {
+        html {
+          font-size: 3vw;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        html {
+          font-size: 2vw;
+        }
+      }
+
+      @media (min-width: 2000px) {
+        html {
+          font-size: 1vw;
+        }
+      }
+
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      /* Keep p at 1rem but start at 0.9rem basis before creating the scale, 
+          so we bring all the headings down but preserve proportions. */
+      h1 { font-size: 2.025rem; }
+      h2 { font-size: 1.35rem; }
+      p  { font-size: 1rem; }
+
+      @media (min-width: 400px) {
+        h1 { font-size: 2.25rem; }
+        h2 { font-size: 1.5rem; }
+        p  { font-size: 1rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but portfolio doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
