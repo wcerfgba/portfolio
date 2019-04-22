@@ -35,7 +35,13 @@
             >
               <p>This is some stuff about this project</p>
             </portfolio-square>
-            <div class="square"></div>
+            <portfolio-square
+              title="Gradient Resonance"
+              :icon="require('./assets/gradient-icon.png')"
+              :photo="require('./assets/gradient-photo.png')"
+            >
+              <p>This is some stuff about this project</p>
+            </portfolio-square>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>

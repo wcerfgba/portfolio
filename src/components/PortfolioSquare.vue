@@ -106,6 +106,7 @@ export default {
     overflow: hidden;
     max-width: 60rem;
     height: calc(100% - 2rem);
+    display: inline-block;
   }
 
   .photo {
@@ -115,8 +116,8 @@ export default {
   }
 
   .photo img {
-    max-width: 200%;
-    max-height: 200%;
+    max-width: 280%;
+    max-height: 280%;
   }
 
   .description {
