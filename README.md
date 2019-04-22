@@ -18,18 +18,20 @@
 ## To add
 
 * HebrewTime
-* Poetry
 * aesthetic css (memes)
 * slink (dead, still cool)
 
 
 
 ## To develop
+
 * photography
+* Poetry
 * bytebeat
-* Recipes (need to write up)
-* git-matrix (needs a rebuild!)
 * Navvies' Barge (when live)
+* Recipes (need to write up, opportunity for nice design and copywriting)
+* Blog (what articles!?!)
+* git-matrix (needs a rebuild!)
 * gridball (needs looove)
 * easysampler (needs mad love)
 
