@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import PortalVue, { Portal } from 'portal-vue'
+import PortalVue from 'portal-vue'
 import App from './App.vue'
 
 Vue.config.productionTip = false

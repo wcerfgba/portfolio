@@ -21,7 +21,13 @@
             >
               <p>This is some stuff about this project</p>
             </portfolio-square>
-            <div class="square"></div>
+            <portfolio-square
+              title="Mona Lisa in Rectangles"
+              :icon="require('./assets/monalisa-icon.png')"
+              :photo="require('./assets/monalisa-photo.png')"
+            >
+              <p>This is some stuff about this project</p>
+            </portfolio-square>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
@@ -43,9 +49,9 @@
       <div class="slice contact">
         <h2>Contact</h2>
         <textarea name="" id="" placeholder="Hi John,
-    Can you email me at me@place.net?
-    Thanks!
-    Name"></textarea>
+Can you email me at me@place.net?
+Thanks!
+Name"></textarea>
         <input type="submit" value="Send">
       </div>
     </main>
@@ -185,7 +191,7 @@ main, .app-outer { height: 100%; }
   background: #444;
   color: #eee;
   width: 100%;
-  max-width: 1024px;
+  max-width: 23rem;
   height: 5em;
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
