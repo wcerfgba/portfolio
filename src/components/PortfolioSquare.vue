@@ -1,20 +1,24 @@
 <template>
-  <div class="outer">
+  <div class="ps-outer">
     <div class="icon" @click="doOpen">
       <img :src="icon" :alt="title">
     </div>
-    <div class="page" v-show="isOpen">
-      <div class="photo">
-        <img :src="photo">
+    <portal to="overlay" v-if="isOpen">
+      <div class="overlay" @click.self="doClose">
+        <div class="page">
+          <div class="photo">
+            <img :src="photo">
+          </div>
+          <div class="close">
+            <span @click="doClose">×</span>
+          </div>
+          <div class="description">
+            <h2 class="title">{{ title }}</h2>
+            <slot></slot>
+          </div>
+        </div>
       </div>
-      <div class="close">
-        <span @click="doClose">×</span>
-      </div>
-      <div class="description">
-        <h2 class="title">{{ title }}</h2>
-        <slot></slot>
-      </div>
-    </div>
+    </portal>
   </div>
 </template>
 
@@ -30,9 +34,11 @@ export default {
   methods: {
     doOpen: function () {
       this.isOpen = true
+      this.$root.blurMain = true
     },
     doClose: function () {
       this.isOpen = false
+      this.$root.blurMain = false
     },
   },
 }
@@ -44,25 +50,30 @@ export default {
     margin: 1px;
   }
 
-  .page {
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(0, 0, 0, 0.01); */
+    /* filter: blur(3px); */
+  }
+
+  .page {
+    position: relative;
     margin: 1rem;
     background: #fcfcfc;
-    box-shadow: 7px 6px 20px -9px #0008;
-    /* display: grid;
-    grid-template: 
-      "photo close"       auto
-      "photo description" auto
-      / auto auto; */
+    box-shadow: 5px 5px 15px #0002;
+    overflow: hidden;
+    max-width: 60rem;
   }
 
   .photo {
-    width: 66.666%;
-    float: left;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -77,6 +88,7 @@ export default {
     height: 1rem;
     width: 1rem;
     margin: 0.5rem;
+    z-index: 2;
   }
 
   .close span {
@@ -85,9 +97,17 @@ export default {
   }
 
   .description {
-    width: 33.333%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20rem;
     float: right;
     padding: 1rem;
+    padding: 2rem 1rem;
+    height: 100%;
+    box-shadow: 0 0 10px #0002;
+    background: #fcfcfc;
   }
 
   .title {
