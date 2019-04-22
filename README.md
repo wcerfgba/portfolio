@@ -1,29 +1,26 @@
-# portfolio
+## Content
 
-## Project setup
-```
-npm install
-```
+* Real Users Club
+* Mona Lisa in Rectangles
+* Gradient Resonance
+* I CAN FEEL
+* HebrewTime
+* Poetry
+* bytebeat
+* photography (take photos)
+* Recipes (need to write up)
+* git-matrix (needs some love and promotion!!!)
+* p5js-canvas (likewise)
+* Navvies' Barge (when live)
+* gridball (likewise, but needs mooore looove)
+* easysampler (needs mad love)
+* slink (dead, still cool)
+* aesthetic css (memes)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Inspiration
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* http://sebastianschmieg.com/alljqueryeffects/
+   maybe TUI/cyber like awyn suggested
+* http://art.teleportacia.org/#CenterOfTheUniverse
+* https://www.artsy.net/gene/net-art
