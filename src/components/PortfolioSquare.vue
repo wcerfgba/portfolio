@@ -48,7 +48,7 @@ export default {
   },
   components: {
     ScrollPlane
-  }
+  },
 }
 </script>
 
@@ -81,7 +81,7 @@ export default {
   .close {
     position: absolute;
     top: unset;
-    bottom: 8,5rem;
+    bottom: 9rem;
     right: 0;
     height: 1rem;
     width: 1rem;
@@ -109,7 +109,8 @@ export default {
   }
 
   .photo {
-    height: calc(100% - 12rem);
+    /* height: calc(100% - 12rem); */
+    height: 100%;
     width: 100%;
   }
 
@@ -122,7 +123,7 @@ export default {
     position: absolute;
     top: unset;
     left: 0;
-    bottom: 0;
+    bottom: 1rem;
     right: 0;
     width: 100%;
     height: 12rem;
@@ -133,15 +134,15 @@ export default {
   }
 
   @media (min-width: 800px) {
-    .photo {
+    /* .photo {
       width: calc(100% - 20rem);
       height: 100%;
-    }
+    } */
 
     .description {
       top: 0;
       left: unset;
-      right: 0;
+      right: 2rem;
       bottom: 0;
       height: 100%;
       width: 20rem;
@@ -150,6 +151,7 @@ export default {
 
     .close {
       top: 0;
+      right: 3rem;
       bottom: unset;
       margin: 1rem;
     }

@@ -1,6 +1,6 @@
 <template>
 <div class="scrollplane">
-  <div class="inner">
+  <div class="inner" ref="inner">
     <slot></slot>
   </div>
 </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'ScrollPlane'
+  name: 'ScrollPlane',
 }
 </script>
 

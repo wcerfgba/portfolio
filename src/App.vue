@@ -28,7 +28,13 @@
             >
               <p>This is some stuff about this project</p>
             </portfolio-square>
-            <div class="square"></div>
+            <portfolio-square
+              title="steep"
+              :icon="require('./assets/steep-icon.png')"
+              :photo="require('./assets/steep-photo.jpg')"
+            >
+              <p>This is some stuff about this project</p>
+            </portfolio-square>
             <div class="square"></div>
             <div class="square"></div>
             <div class="square"></div>
