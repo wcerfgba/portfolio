@@ -45,8 +45,10 @@
             <portfolio-square
               title="Gradient Resonance"
               :icon="require('./assets/gradient-icon.png')"
-              :photo="require('./assets/gradient-photo.png')"
             >
+              <template v-slot:live>
+                <gradient-resonance></gradient-resonance>
+              </template>
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <portfolio-square
@@ -100,12 +102,14 @@ Name"></textarea>
 <script>
 import PortfolioSquare from './components/PortfolioSquare'
 import ICanFeel from './components/I_CAN_FEEL'
+import GradientResonance from './components/GradientResonance'
 
 export default {
   name: 'app',
   components: {
     PortfolioSquare,
     ICanFeel,
+    GradientResonance,
   },
   computed: {
     mainClass: function () {
