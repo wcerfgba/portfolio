@@ -6,9 +6,10 @@
     <portal to="overlay" v-if="isOpen">
       <div class="overlay" @click.self="doClose">
         <div class="page">
-          <scroll-plane class="photo">
-            <img :src="photo">
-          </scroll-plane>
+          <div class="photo">
+            <!-- <img :src="photo"> -->
+            <slot name="live"></slot>
+          </div>
           <div class="close" @click="doClose">
             <svg viewBox="0 0 12 12">
               <path d="M0,0l12,12z" />
@@ -104,49 +105,56 @@ export default {
     background: #fcfcfc;
     box-shadow: 5px 5px 15px #0002;
     overflow: hidden;
-    max-width: 60rem;
-    height: calc(100% - 2rem);
-    display: inline-block;
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .photo {
-    /* height: calc(100% - 12rem); */
-    height: 100%;
-    width: 100%;
+    /* height: calc(100% - 12rem);
+    width: 100%; */
   }
 
-  .photo img {
+  /* .photo img 
     max-width: 280%;
     max-height: 280%;
-  }
+  } */
 
   .description {
-    position: absolute;
+    /* position: absolute;
     top: unset;
     left: 0;
-    bottom: 1rem;
+    bottom: 0;
     right: 0;
     width: 100%;
-    height: 12rem;
+    height: 12rem; */
     padding: 2.4rem 1.8rem;
-    box-shadow: 0 0 10px #0002;
-    background: #fcfcfc;
-    overflow: scroll;
+    /* background: #fcfcfc; */
+    /* overflow: hidden; */
+    width: 100%;
+    align-self: stretch;
   }
 
   @media (min-width: 800px) {
-    /* .photo {
-      width: calc(100% - 20rem);
-      height: 100%;
-    } */
+    .page {
+      flex-direction: row;
+    }
+
+    .photo {
+      /* width: calc(100% - 20rem);
+      height: 100%; */
+    }
 
     .description {
-      top: 0;
+      /* top: 0;
       left: unset;
-      right: 2rem;
+      right: 0;
       bottom: 0;
-      height: 100%;
+      height: 100%; */
       width: 20rem;
+      height: 100%;
       padding: 2.8rem;
     }
 

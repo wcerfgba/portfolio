@@ -9,7 +9,14 @@
         <h2>human</h2>
       </div>
       <div class="slice about">
-        <p>This is me, saying some words about myself. I need to talk about all the stuff I do, why I'm so cool, what my philosophy is. Y'know, portfolio stuff. </p>
+
+        
+        
+
+
+        Previously software engineer at Residently
+
+
       </div>
       <div class="slice portfolio">
         <div class="portfolio">
@@ -47,6 +54,9 @@
               :icon="require('./assets/feel-icon.png')"
               :photo="require('./assets/feel-photo.png')"
             >
+              <template v-slot:live>
+                <i-can-feel></i-can-feel>
+              </template>
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <portfolio-square
@@ -89,11 +99,13 @@ Name"></textarea>
 
 <script>
 import PortfolioSquare from './components/PortfolioSquare'
+import ICanFeel from './components/I_CAN_FEEL'
 
 export default {
   name: 'app',
   components: {
-    PortfolioSquare
+    PortfolioSquare,
+    ICanFeel,
   },
   computed: {
     mainClass: function () {
@@ -230,5 +242,10 @@ main, .app-outer { height: 100%; }
   color: #eee;
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
+}
+
+.i_can_feel {
+  width: 30rem;
+  height: 30rem;
 }
 </style>

@@ -1,8 +1,24 @@
-## To clean
+# 2019-04-27
 
-* p5.js Canvas
-* I CAN FEEL
+the portfolio is for art. i am an artist.
 
+i_can_feel
+gradient resonance
+arches at night in leyland
+looking for a job
+mona lisa in rectangles
+personal statement
+
+take more photos
+make necklaces
+???
+hebrewtime reboot
+
+
+
+# pre-2019-04-27
+
+## Done
 
 
 ## To write
@@ -19,22 +35,28 @@
 
 * HebrewTime
 * aesthetic css (memes)
-* slink (dead, still cool)
+
+
+
+## To clean
+
+* I CAN FEEL
 
 
 
 ## To develop
 
+* Blog (opportunity for design/copy)
+  * WordPress architecture
 * photography
-* Poetry
+  * arches at night in leyland
+  * steep photos
+  * around leyland
+* Poetry (opportunity for design/copy)
 * bytebeat
 * Navvies' Barge (when live)
 * Recipes (need to write up, opportunity for nice design and copywriting)
-* Blog (what articles!?!)
-* git-matrix (needs a rebuild!)
-* gridball (needs looove)
-* easysampler (needs mad love)
-
+* NEED TO DO MORE ART STUFF
 
 
 
@@ -44,3 +66,10 @@
    maybe TUI/cyber like awyn suggested
 * http://art.teleportacia.org/#CenterOfTheUniverse
 * https://www.artsy.net/gene/net-art
+* https://kern.io/
+
+
+
+## protips
+
+* 'market' your projects. once it hits a certain point, you have to tell people about it. otherwise how do you know when it's 'finished'?
