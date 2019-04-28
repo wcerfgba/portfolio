@@ -61,11 +61,26 @@ export default {
 <style scoped>
 .inner {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  white-space: nowrap;
+  margin: 0.25rem 1rem;
 }
 
 p {
-  margin-right: 3rem;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 25rem) {
+  .inner {
+    flex-direction: row;
+    justify-content: center;
+    white-space: nowrap;
+    margin: 1.5rem 0;
+  }
+
+  p {
+    margin: 0 1.5rem;
+  }
 }
 </style>

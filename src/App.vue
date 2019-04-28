@@ -87,22 +87,45 @@ export default {
 </script>
 
 <style scoped>
+.slice {
+  height: 100vh;
+  border-top: 0.1rem solid #f00;
+  border-bottom: 0.1rem solid #f00;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+
+.left, .right {
+  height: 50%;
+  overflow: auto;
+}
+
+.left {
+  background: #fee;
+}
+
+.left > * {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.right {
+  padding: 0 1rem;
+  background: #fcfcfc;
+}
+
 @media (min-width: 800px) {
-  .app {
-
-  }
-
   .slice {
     max-height: 60rem;
     height: calc(50vw - 2.2rem);
-    border-top: 0.1rem solid #f00;
-    border-bottom: 0.1rem solid #f00;
-    display: flex;
     flex-direction: row;
     margin: 2rem;
   }
 
   .left, .right {
+    height: 100%;
     width: 50%;
     overflow: hidden;
   }
@@ -113,9 +136,8 @@ export default {
   }
 
   .left > * {
+    width: auto;
     height: 100%;
-    display: block;
-    margin: 0 auto;
   }
 
   .right {

@@ -52,7 +52,6 @@ export default {
 .i_can_feel {
   width: 100%;
   height: 100%;
-  min-width: 30rem;
 }
 
 canvas {
