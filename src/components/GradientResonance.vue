@@ -166,8 +166,8 @@ canvas {
 
 .point {
   position: absolute;
-  font-size: 0.8rem;
-  font-family: sans-serif;
+  font-size: 16px;
+  /* font-family: sans-serif; */
   padding-left: 4px;
   mix-blend-mode: difference;
   color: #fff;

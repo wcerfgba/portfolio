@@ -8,6 +8,10 @@
           <h2>I CAN FEEL</h2>
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i am sasying something different.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i am sasying something different.</p>
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
         </div>
       </div>
@@ -88,7 +92,7 @@ export default {
 
 <style scoped>
 .slice {
-  height: 100vh;
+  height: 85vh;
   border-top: 1px solid #f00;
   border-bottom: 1px solid #f00;
   display: flex;
@@ -116,11 +120,22 @@ export default {
 .right {
   padding: 0 1rem;
   background: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 800px) {
+.right > * {
+  margin: 0.5rem 0;
+}
+
+.right > *:first-child {
+  margin-top: 1rem;
+}
+
+@media (min-width: 580px) {
   .slice {
-    max-height: 60rem;
+    max-height: 85vh;
     height: 50vw;
     flex-direction: row;
     margin: 2.1rem;
@@ -133,6 +148,10 @@ export default {
 
   .left {
     background: #fee;
+  }
+
+  .right {
+    flex-wrap: nowrap;
   }
 }
 </style>

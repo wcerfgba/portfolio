@@ -1,7 +1,7 @@
 <template>
   <div class="looking_for_work">
     <div class="inner">
-      <p>More rejection letter<br>
+      <p>More rejection letters<br>
       arrived today<br>
       in my inbox.<br>
       "Exceptional candidates<br>
@@ -68,20 +68,25 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   white-space: nowrap;
   margin: 0.25rem 1rem;
 }
 
 p {
   margin: 0.75rem 0;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  width: 11rem;
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 950px) {
   .inner {
     flex-direction: row;
     justify-content: center;
-    white-space: nowrap;
-    margin: 1.5rem 0;
+    align-items: flex-start;
+    margin: auto;
   }
 
   p {
