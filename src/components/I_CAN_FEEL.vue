@@ -16,14 +16,8 @@ export default {
     }
   },
   mounted: function () {
-    const minParentDim = Math.min(
-      this.$refs.outer.parentElement.clientWidth,
-      this.$refs.outer.parentElement.clientHeight
-    )
-    this.$refs.canvas.width = minParentDim
-    this.$refs.canvas.height = minParentDim
-    this.$refs.outer.style.width = minParentDim + 'px'
-    this.$refs.outer.style.height = minParentDim + 'px'
+    this.rescale()
+    window.addEventListener('resize', this.rescale)
     this.ctx = this.$refs.canvas.getContext('2d')
     this.animate()
   },
@@ -39,6 +33,16 @@ export default {
         this.ctx.fillRect(this.x(i), this.y(i), w, w)
       }
       window.requestAnimationFrame(this.animate)
+    },
+    rescale: function () {
+      const minParentDim = Math.min(
+        this.$refs.outer.parentElement.clientWidth,
+        this.$refs.outer.parentElement.clientHeight
+      )
+      this.$refs.canvas.width = minParentDim
+      this.$refs.canvas.height = minParentDim
+      this.$refs.outer.style.width = minParentDim + 'px'
+      this.$refs.outer.style.height = minParentDim + 'px'
     }
   }
 }

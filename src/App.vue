@@ -54,6 +54,9 @@
         </div>
         <div class="right">
           <h2>Looking for work</h2>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
         </div>
       </div>
 
@@ -90,27 +93,33 @@ export default {
   }
 
   .slice {
-    height: 60rem;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
+    max-height: 60rem;
+    height: calc(50vw - 2.2rem);
+    border-top: 0.1rem solid #f00;
+    border-bottom: 0.1rem solid #f00;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     margin: 2rem;
   }
 
-  .left {
-    flex: 1;
-    width: 100%;
-    margin: 0 auto;
+  .left, .right {
+    width: 50%;
+    overflow: hidden;
   }
 
-  .right {
-    flex : 1;
+  .left {
+    background: #fee;
+    padding: 0 1rem;
   }
 
   .left > * {
     height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .right {
+    padding: 0 1rem;
   }
 }
 </style>

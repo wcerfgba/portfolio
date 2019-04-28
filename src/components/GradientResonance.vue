@@ -1,6 +1,5 @@
 <template>
-  <div class="gradient-resonance">
-    <div class="inner" ref="inner">
+  <div class="gradient-resonance" ref="outer">
       <canvas ref="canvas"></canvas>
       <div class="gr-overlay">
         <div class="point" style="left: 0%; top: 16.666%;">Red/Violet</div>
@@ -123,18 +122,22 @@ void main() {
 
 export default {
   name: 'GradientResonance',
-  mounted: function () {
-    (new GlslCanvas(this.$refs.canvas)).load(frag)
-    this.$nextTick(() => {
+  methods: {
+    rescale: function () {
       const minParentDim = Math.min(
-        this.$refs.inner.parentElement.clientWidth,
-        this.$refs.inner.parentElement.clientHeight
+        this.$refs.outer.parentElement.clientWidth,
+        this.$refs.outer.parentElement.clientHeight
       )
       this.$refs.canvas.width = minParentDim
       this.$refs.canvas.height = minParentDim
-      this.$refs.inner.style.width = minParentDim + 'px'
-      this.$refs.inner.style.height = minParentDim + 'px'
-    })
+      this.$refs.outer.style.width = minParentDim + 'px'
+      this.$refs.outer.style.height = minParentDim + 'px'
+    }
+  },
+  mounted: function () {
+    (new GlslCanvas(this.$refs.canvas)).load(frag)
+    this.rescale()
+    window.addEventListener('resize', this.rescale)
   }
 }
 </script>
