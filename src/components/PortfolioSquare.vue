@@ -7,7 +7,6 @@
       <div class="overlay" @click.self="doClose">
         <div class="page">
           <div class="photo">
-            <!-- <img :src="photo"> -->
             <slot name="live"></slot>
           </div>
           <div class="close" @click="doClose">
@@ -27,8 +26,6 @@
 </template>
 
 <script>
-import ScrollPlane from './ScrollPlane'
-
 export default {
   name: 'PortfolioSquare',
   props: ['icon', 'title', 'photo'],
@@ -46,9 +43,6 @@ export default {
       this.isOpen = false
       this.$root.blurMain = false
     },
-  },
-  components: {
-    ScrollPlane
   },
 }
 </script>
@@ -117,10 +111,9 @@ export default {
     width: 100%; */
   }
 
-  /* .photo img 
-    max-width: 280%;
-    max-height: 280%;
-  } */
+  .photo img {
+    display: block;
+  }
 
   .description {
     /* position: absolute;
@@ -160,7 +153,7 @@ export default {
 
     .close {
       top: 0;
-      right: 3rem;
+      right: 0;
       bottom: unset;
       margin: 1rem;
     }

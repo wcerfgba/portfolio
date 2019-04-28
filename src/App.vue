@@ -22,24 +22,12 @@
         <div class="portfolio">
           <div class="squares">
             <portfolio-square
-              title="Real Users Club"
-              :icon="require('./assets/realusersclub-icon.png')"
-              :photo="require('./assets/realusersclub-photo.png')"
+              title="I CAN FEEL"
+              :icon="require('./assets/feel-icon.png')"
             >
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <portfolio-square
-              title="Mona Lisa in Rectangles"
-              :icon="require('./assets/monalisa-icon.png')"
-              :photo="require('./assets/monalisa-photo.png')"
-            >
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <portfolio-square
-              title="steep"
-              :icon="require('./assets/steep-icon.png')"
-              :photo="require('./assets/steep-photo.jpg')"
-            >
+              <template v-slot:live>
+                <i-can-feel></i-can-feel>
+              </template>
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <portfolio-square
@@ -52,20 +40,21 @@
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <portfolio-square
-              title="I CAN FEEL"
-              :icon="require('./assets/feel-icon.png')"
-              :photo="require('./assets/feel-photo.png')"
+              title="Arches at Night in Leyland"
+              :icon="require('./assets/arches-icon.jpg')"
             >
               <template v-slot:live>
-                <i-can-feel></i-can-feel>
+                <img src="./assets/arches-photo.jpg">
               </template>
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <portfolio-square
-              title="p5.js Canvas"
-              :icon="require('./assets/p5jscanvas-icon.png')"
-              :photo="require('./assets/p5jscanvas-photo.png')"
+              title="Mona Lisa in Rectangles"
+              :icon="require('./assets/monalisa-icon.png')"
             >
+              <template v-slot:live>
+                <img src="./assets/monalisa-photo.png">
+              </template>
               <p>This is some stuff about this project</p>
             </portfolio-square>
             <div class="square"></div>

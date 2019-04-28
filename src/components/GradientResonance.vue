@@ -6,7 +6,7 @@
       <div class="point" style="left: 0%; top: 11.333%;">Red/Violet -> Pinker</div>
       <div class="point" style="left: 50%; top: 33.333%;">Cyan/Yellow</div>
       <div class="point" style="left: 71.3%; top: 5.6%;">Brilliant Blue,<br>Purple Tint</div>
-      <div class="point" style="left: 83.333%; top: 72%;">Violet/Orange-Yellow</div>
+      <div class="point" style="left: 83.333%; top: 70%;">Violet/Orange-Yellow</div>
     </div>
   </div>
 </template>
@@ -152,7 +152,7 @@ canvas {
 
 .point {
   position: absolute;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-family: sans-serif;
   padding-left: 4px;
   mix-blend-mode: difference;
