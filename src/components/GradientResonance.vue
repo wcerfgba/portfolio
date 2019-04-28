@@ -1,12 +1,14 @@
 <template>
   <div class="gradient-resonance">
-    <canvas ref="canvas"></canvas>
-    <div class="gr-overlay">
-      <div class="point" style="left: 0%; top: 16.666%;">Red/Violet</div>
-      <div class="point" style="left: 0%; top: 11.333%;">Red/Violet -> Pinker</div>
-      <div class="point" style="left: 50%; top: 33.333%;">Cyan/Yellow</div>
-      <div class="point" style="left: 71.3%; top: 5.6%;">Brilliant Blue,<br>Purple Tint</div>
-      <div class="point" style="left: 83.333%; top: 70%;">Violet/Orange-Yellow</div>
+    <div class="inner" ref="inner">
+      <canvas ref="canvas"></canvas>
+      <div class="gr-overlay">
+        <div class="point" style="left: 0%; top: 16.666%;">Red/Violet</div>
+        <div class="point" style="left: 0%; top: 11.333%;">Red/Violet -> Pinker</div>
+        <div class="point" style="left: 50%; top: 33.333%;">Cyan/Yellow</div>
+        <div class="point" style="left: 71.3%; top: 5.6%;">Brilliant Blue,<br>Purple Tint</div>
+        <div class="point" style="left: 83.333%; top: 70%;"><span style="display: block; transform: translate(-2rem, 0.5rem)">Violet/Orange-Yellow</span></div>
+      </div>
     </div>
   </div>
 </template>
@@ -124,8 +126,14 @@ export default {
   mounted: function () {
     (new GlslCanvas(this.$refs.canvas)).load(frag)
     this.$nextTick(() => {
-      this.$refs.canvas.width = '720'
-      this.$refs.canvas.height = '720'
+      const minParentDim = Math.min(
+        this.$refs.inner.parentElement.clientWidth,
+        this.$refs.inner.parentElement.clientHeight
+      )
+      this.$refs.canvas.width = minParentDim
+      this.$refs.canvas.height = minParentDim
+      this.$refs.inner.style.width = minParentDim + 'px'
+      this.$refs.inner.style.height = minParentDim + 'px'
     })
   }
 }
@@ -133,8 +141,13 @@ export default {
 
 <style scoped>
 .gradient-resonance {
-  width: 720px;
-  height: 720px;
+  width: 100%;
+  height: 100%;
+  min-width: 30rem;
+  position: relative;
+}
+
+.inner {
   position: relative;
 }
 
@@ -152,7 +165,7 @@ canvas {
 
 .point {
   position: absolute;
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   font-family: sans-serif;
   padding-left: 4px;
   mix-blend-mode: difference;

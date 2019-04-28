@@ -1,244 +1,116 @@
 <template>
-  <div class="app-outer">
-    <main :class="mainClass">
-      <div class="slice my-card">
-        <h1>John L. Preston</h1>
-        <h2>software engineer</h2>
-        <h2>multimedia artist</h2>
-        <h2>entrepreneur</h2>
-        <h2>human</h2>
-      </div>
-      <div class="slice about">
-
-        
-        
-
-
-        Previously software engineer at Residently
-
-
-      </div>
-      <div class="slice portfolio">
-        <div class="portfolio">
-          <div class="squares">
-            <portfolio-square
-              title="I CAN FEEL"
-              :icon="require('./assets/feel-icon.png')"
-            >
-              <template v-slot:live>
-                <i-can-feel></i-can-feel>
-              </template>
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <portfolio-square
-              title="Gradient Resonance"
-              :icon="require('./assets/gradient-icon.png')"
-            >
-              <template v-slot:live>
-                <gradient-resonance></gradient-resonance>
-              </template>
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <portfolio-square
-              title="Arches at Night in Leyland"
-              :icon="require('./assets/arches-icon.jpg')"
-            >
-              <template v-slot:live>
-                <img src="./assets/arches-photo.jpg">
-              </template>
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <portfolio-square
-              title="Mona Lisa in Rectangles"
-              :icon="require('./assets/monalisa-icon.png')"
-            >
-              <template v-slot:live>
-                <img src="./assets/monalisa-photo.png">
-              </template>
-              <p>This is some stuff about this project</p>
-            </portfolio-square>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-          </div>
-          <div class="lines">
-            <ul>
-              <li><span class="date">2019-09-99</span> Something here</li>
-              <li><span class="date">2019-09-99</span> Something here</li>
-              <li><span class="date">2019-09-99</span> Something here</li>
-              <li><span class="date">2019-09-99</span> Something here</li>
-              <li><span class="date">2019-09-99</span> Something here</li>
-            </ul>
-          </div>
+  <div class="app">
+      <div class="slice">
+        <div class="left">
+          <i-can-feel></i-can-feel>
+        </div>
+        <div class="right">
+          <h2>I CAN FEEL</h2>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
         </div>
       </div>
-      <div class="slice contact">
+
+      <div class="slice">
+        <div class="left">
+          <gradient-resonance></gradient-resonance>
+        </div>
+        <div class="right">
+          <h2>Gradient Resonance</h2>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        </div>
+      </div>
+
+      <div class="slice">
+        <div class="left">
+          <img src="./assets/arches-photo.jpg">
+        </div>
+        <div class="right">
+          <h2>Arches at Night in Leyland</h2>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        </div>
+      </div>
+
+      <div class="slice">
+        <div class="left">
+          <img src="./assets/monalisa-photo.png">
+        </div>
+        <div class="right">
+          <h2>Mona Lisa in Rectanges</h2>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        </div>
+      </div>
+
+      <div class="slice">
+        <div class="left">
+          <looking-for-work></looking-for-work>
+        </div>
+        <div class="right">
+          <h2>Looking for work</h2>
+        </div>
+      </div>
+
+      <!-- <div class="slice contact">
         <h2>Contact</h2>
         <textarea name="" id="" placeholder="Hi John,
 Can you email me at me@place.net?
 Thanks!
 Name"></textarea>
         <input type="submit" value="Send">
-      </div>
-    </main>
-    <div class="overlay">
-      <portal-target name="overlay"></portal-target>
-    </div>
+      </div> -->
   </div>
 </template>
 
 <script>
-import PortfolioSquare from './components/PortfolioSquare'
 import ICanFeel from './components/I_CAN_FEEL'
 import GradientResonance from './components/GradientResonance'
+import LookingForWork from './components/LookingForWork'
 
 export default {
   name: 'app',
   components: {
-    PortfolioSquare,
     ICanFeel,
     GradientResonance,
-  },
-  computed: {
-    mainClass: function () {
-      return {
-        'blur': this.$root.blurMain
-      }
-    }
+    LookingForWork
   }
 }
 </script>
 
 <style scoped>
-main, .app-outer { height: 100%; }
+@media (min-width: 800px) {
+  .app {
 
-.blur { filter: blur(3px); }
-
-.slice {
-  padding: 3% 3vw;
-  height: 110%;
-}
-
-.my-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.my-card h1 {
-  margin: 0 0 1rem;
-}
-
-.my-card h2 {
-  font-weight: normal;
-  margin: 0;
-  color: #555;
-}
-
-.my-card h2:last-child {
-  color: #333;
-}
-
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.portfolio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.portfolio > * { margin-bottom: 1rem; }
-.portfolio > *:last-child { margin-bottom: 0; }
-
-@media (min-width: 1000px) {
-  .portfolio {
-    flex: 1;
-    flex-direction: row;
   }
 
-  .portfolio > * { margin-right: 1rem; }
-  .portfolio > *:last-child { margin-right: 0; }
-}
+  .slice {
+    height: 60rem;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem;
+  }
 
-.portfolio .squares {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
-}
+  .left {
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+  }
 
-.portfolio .squares .square {
-  width: 24%;
-  padding-top: 24%; /* hck for placeholder squares/*/
-  margin: 1px;
-  background: #aaa;
-}
+  .right {
+    flex : 1;
+  }
 
-.portfolio .lines {
-  flex: 1;
-}
-
-.portfolio .lines ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.portfolio .lines ul li {
-  white-space: nowrap;
-  margin-bottom: 0.3rem;
-}
-
-.portfolio .lines .date {
-  font-size: 0.8em;
-  margin-right: 1rem;
-  color: #444;
-}
-
-.contact {
-  background: #333;
-  color: #eee;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact h2 {
-  font-weight: normal;
-  margin: 0 0 1rem 0;
-}
-
-.contact textarea {
-  margin: 0 0 1rem 0;
-  border: none;
-  background: #444;
-  color: #eee;
-  width: 100%;
-  max-width: 23rem;
-  height: 5em;
-  font-family: 'Lato', sans-serif;
-  font-size: 1rem;
-}
-
-.contact input[type="submit"] {
-  margin: 0 0 1rem 0;
-  border: none;
-  background: #444;
-  color: #eee;
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem;
-}
-
-.i_can_feel {
-  width: 30rem;
-  height: 30rem;
+  .left > * {
+    height: 100%;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="i_can_feel">
+  <div class="i_can_feel" ref="outer">
     <canvas ref="canvas"></canvas>
   </div>
 </template>
@@ -16,8 +16,14 @@ export default {
     }
   },
   mounted: function () {
-    this.$refs.canvas.width = this.$refs.canvas.clientWidth
-    this.$refs.canvas.height = this.$refs.canvas.clientHeight
+    const minParentDim = Math.min(
+      this.$refs.outer.parentElement.clientWidth,
+      this.$refs.outer.parentElement.clientHeight
+    )
+    this.$refs.canvas.width = minParentDim
+    this.$refs.canvas.height = minParentDim
+    this.$refs.outer.style.width = minParentDim + 'px'
+    this.$refs.outer.style.height = minParentDim + 'px'
     this.ctx = this.$refs.canvas.getContext('2d')
     this.animate()
   },
@@ -39,13 +45,13 @@ export default {
 </script>
 
 <style scoped>
-  .i_can_feel {
-    width: 100%;
-    height: 100%;
-  }
+.i_can_feel {
+  width: 100%;
+  height: 100%;
+  min-width: 30rem;
+}
 
-  canvas {
-    width: 100%;
-    height: 100%;
-  }
+canvas {
+  display: block;
+}
 </style>
