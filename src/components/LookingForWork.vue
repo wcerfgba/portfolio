@@ -71,7 +71,7 @@ p {
   margin: 0.75rem 0;
 }
 
-@media (min-width: 25rem) {
+@media (min-width: 20rem) {
   .inner {
     flex-direction: row;
     justify-content: center;

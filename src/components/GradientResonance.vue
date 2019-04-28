@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import GlslCanvas from 'glslCanvas'
+import GlslCanvas from '../../vendor/glslCanvas/src/GlslCanvas'
 
 const frag = `
 #ifdef GL_ES
@@ -127,10 +127,10 @@ export default {
         this.$refs.outer.parentElement.clientWidth,
         this.$refs.outer.parentElement.clientHeight
       )
-      this.$refs.canvas.width = minParentDim
-      this.$refs.canvas.height = minParentDim
       this.$refs.outer.style.width = minParentDim + 'px'
       this.$refs.outer.style.height = minParentDim + 'px'
+      this.$refs.canvas.width = minParentDim
+      this.$refs.canvas.height = minParentDim
     }
   },
   mounted: function () {
