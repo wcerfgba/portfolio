@@ -59,6 +59,11 @@ export default {
 </script>
 
 <style scoped>
+.looking_for_work {
+  width: 100%;
+  height: 100%;
+}
+
 .inner {
   display: flex;
   flex-direction: column;

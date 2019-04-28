@@ -14,6 +14,8 @@ make necklaces
 ???
 hebrewtime reboot
 
+screaming diamonds -- https://soundcloud.com/gizmoguy-1/screaming_diamondsck
+
 
 
 # pre-2019-04-27

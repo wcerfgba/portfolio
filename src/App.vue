@@ -89,8 +89,8 @@ export default {
 <style scoped>
 .slice {
   height: 100vh;
-  border-top: 0.1rem solid #f00;
-  border-bottom: 0.1rem solid #f00;
+  border-top: 1px solid #f00;
+  border-bottom: 1px solid #f00;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
@@ -103,12 +103,14 @@ export default {
 
 .left {
   background: #fee;
+  display: flex;
 }
 
 .left > * {
   display: block;
-  margin: 0 auto;
+  margin: auto;
   width: 100%;
+  height: auto;
 }
 
 .right {
@@ -119,29 +121,18 @@ export default {
 @media (min-width: 800px) {
   .slice {
     max-height: 60rem;
-    height: calc(50vw - 2.2rem);
+    height: 50vw;
     flex-direction: row;
-    margin: 2rem;
+    margin: 2.1rem;
   }
 
   .left, .right {
     height: 100%;
     width: 50%;
-    overflow: hidden;
   }
 
   .left {
     background: #fee;
-    padding: 0 1rem;
-  }
-
-  .left > * {
-    width: auto;
-    height: 100%;
-  }
-
-  .right {
-    padding: 0 1rem;
   }
 }
 </style>
