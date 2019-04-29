@@ -1,77 +1,102 @@
 <template>
   <div class="app">
-      <div class="slice">
-        <div class="left">
-          <i-can-feel></i-can-feel>
-        </div>
-        <div class="right">
-          <h2>I CAN FEEL</h2>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i am sasying something different.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i am sasying something different.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
+    <div class="slice">
+      <div class="big-red">
+        <p>I am a multimedia artist based in <span title="North West United Kingdom">NWUK</span>.</p>
+        <p>
+          multimedia artist
+          nwuk
+          computer science, software engineering
+          social and technical networks/behaviours/systems
+            when computers become prevalent in our environment, does it change how we interact with other humans?
+          widening of the zeitgeist
+            as technology develops at an advancing rate, how do we update our old institutions?
+          patterns and textures
+          environmental degredation, our relationship with nature and other organisms
+        </p>
       </div>
-
-      <div class="slice">
-        <div class="left">
-          <gradient-resonance></gradient-resonance>
-        </div>
-        <div class="right">
-          <h2>Gradient Resonance</h2>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
+    </div>
+    <div class="slice">
+      <div class="left">
+        <i-can-feel ref="icanfeel"></i-can-feel>
       </div>
-
-      <div class="slice">
-        <div class="left">
-          <img src="./assets/arches-photo.jpg">
-        </div>
-        <div class="right">
-          <h2>Arches at Night in Leyland</h2>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
+      <div class="right">
+        <h2>I CAN FEEL</h2>
+        <span class="date">22222</span>
+        <p>
+          The piece is composed of a 13x13 grid of squares, each of which changes between black and white at a set rate. The frequency of each oscillator is chosen such that the grid will eventually produce every 13x13 black and white picture, before looping. This would take 10<span class="superscript">409</span> years.
+        </p>
+        <p>
+          The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <span class="action" @click="resetICanFeel">Click here</span> to reset the simulation to the beginning.
+        </p>
+        <p>
+          simple algorithm, meaningless data, but embodies meaning to humans.
+            what delineates our own sentience?
+            how would we know if a machine is sentient?
+          
+        </p>
       </div>
+    </div>
 
-      <div class="slice">
-        <div class="left">
-          <img src="./assets/monalisa-photo.png">
-        </div>
-        <div class="right">
-          <h2>Mona Lisa in Rectanges</h2>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
+    <div class="slice">
+      <div class="left">
+        <gradient-resonance></gradient-resonance>
       </div>
-
-      <div class="slice">
-        <div class="left">
-          <looking-for-work></looking-for-work>
-        </div>
-        <div class="right">
-          <h2>Looking for work</h2>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
+      <div class="right">
+        <h2>Gradient Resonance</h2>
+        <span class="date">2019</span>
+        <p>This piece is interactive, please move your cursor over or tap on the canvas.</p>
+        <p>Inspired by Bridget Riley's op art and the wallpaper in the confessional of recent seasons of RuPaul's Drag Race, <em>Gradient Resonance</em> is an interactive op art piece which allows an audience member to create a linear gradient from any two full-saturation colors.</p>
+        <p>The resulting gradient is re-imposed on top of itself in a pattern. This creates an effect of different squares fading in from the top and bottom of the piece. The prominence of the effect will vary depending on the colours chosen for the gradient, and some interesting combinations have been highlighted on the piece.</p>
+        <p>
+          themes???
+        </p>
       </div>
+    </div>
 
-      <!-- <div class="slice contact">
-        <h2>Contact</h2>
-        <textarea name="" id="" placeholder="Hi John,
-Can you email me at me@place.net?
-Thanks!
-Name"></textarea>
-        <input type="submit" value="Send">
-      </div> -->
+    <div class="slice">
+      <div class="left">
+        <img src="./assets/arches-photo.jpg">
+      </div>
+      <div class="right">
+        <h2>Arches at Night in Leyland</h2>
+        <span class="date">2019</span>
+        <p>
+          colour
+          'capitalism' looming over
+          light pollution
+          urban density
+
+          need to crop these
+        </p>
+      </div>
+    </div>
+
+    <div class="slice">
+      <div class="left">
+        <img src="./assets/monalisa-photo.png">
+      </div>
+      <div class="right">
+        <h2>Mona Lisa in Rectanges</h2>
+        <span class="date">2019</span>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+      </div>
+    </div>
+
+    <div class="slice">
+      <div class="left">
+        <looking-for-work></looking-for-work>
+      </div>
+      <div class="right">
+        <h2>Looking for work</h2>
+        <span class="date">2019</span>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+        <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -86,6 +111,11 @@ export default {
     ICanFeel,
     GradientResonance,
     LookingForWork
+  },
+  methods: {
+    resetICanFeel: function () {
+      this.$refs.icanfeel.reset()
+    }
   }
 }
 </script>
@@ -131,6 +161,47 @@ export default {
 
 .right > *:first-child {
   margin-top: 1rem;
+}
+
+.big-red {
+  color: #fcfcfc;
+  background: #f00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.big-red > * {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.big-red > *:first-child {
+  margin-top: 1rem;
+}
+
+.big-red span {
+  cursor: pointer;
+  border-bottom: 1px dotted #fcfcfc;
+}
+
+.date {
+  color: #666;
+}
+
+.superscript {
+  font-size: 0.7em;
+  position: relative;
+  top: -0.5em;
+}
+
+.action {
+  cursor: pointer;
+  color: #f00;
+  user-select: none;
 }
 
 @media (min-width: 580px) {
