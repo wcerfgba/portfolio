@@ -2,18 +2,8 @@
   <div class="app">
     <div class="slice">
       <div class="big-red">
-        <p>I am a multimedia artist based in <span title="North West United Kingdom">NWUK</span>.</p>
-        <p>
-          multimedia artist
-          nwuk
-          computer science, software engineering
-          social and technical networks/behaviours/systems
-            when computers become prevalent in our environment, does it change how we interact with other humans?
-          widening of the zeitgeist
-            as technology develops at an advancing rate, how do we update our old institutions?
-          patterns and textures
-          environmental degredation, our relationship with nature and other organisms
-        </p>
+        <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with other people, ourselves, and the <span>natural world</span>.</p>
+        <p>Thanks for visiting.</p>
       </div>
     </div>
     <div class="slice">
@@ -24,7 +14,7 @@
         <h2>I CAN FEEL</h2>
         <span class="date">22222</span>
         <p>
-          The piece is composed of a 13x13 grid of squares, each of which changes between black and white at a set rate. The frequency of each oscillator is chosen such that the grid will eventually produce every 13x13 black and white picture, before looping. This would take 10<span class="superscript">409</span> years.
+          The piece is composed of a 13x13 grid of squares, each of which changes between black and white at a set rate. The frequency of each oscillator is chosen such that the grid will eventually produce every 13x13 black and white picture, before looping. This takes approximately 10<span class="superscript">409</span> years.
         </p>
         <p>
           The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <span class="action" @click="resetICanFeel">Click here</span> to reset the simulation to the beginning.
@@ -127,7 +117,11 @@ export default {
   border-bottom: 1px solid #f00;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  margin: 2rem 0.5rem;
+}
+
+.slice:first-child {
+  margin-top: 0.5rem;
 }
 
 .left, .right {
@@ -148,19 +142,17 @@ export default {
 }
 
 .right {
-  padding: 0 1rem;
   background: #fcfcfc;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding: 0.5rem;
 }
 
 .right > * {
-  margin: 0.5rem 0;
-}
-
-.right > *:first-child {
-  margin-top: 1rem;
+  width: 90%;
+  margin: 0;
+  padding: 0.5rem;
 }
 
 .big-red {
@@ -171,16 +163,12 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .big-red > * {
   margin: 0.5rem 0;
   font-size: 1.5rem;
-}
-
-.big-red > *:first-child {
-  margin-top: 1rem;
 }
 
 .big-red span {
@@ -210,6 +198,10 @@ export default {
     height: 50vw;
     flex-direction: row;
     margin: 2.1rem;
+  }
+
+  .slice:first-child {
+    margin-top: 2.1rem;
   }
 
   .left, .right {
