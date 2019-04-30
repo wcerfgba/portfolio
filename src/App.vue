@@ -27,7 +27,7 @@
             This meaningful image is just one shard in a vast library of meaningless arrangements of squares. As we continue to watch the piece, we can recognise smaller patterns in the pixels. One might consider what shapes our concept of 'meaning' to be so specific.
           </p>
           <p>
-            It is important to consider that the system of oscillators is not aware of its own arrangement: if we rearranged the squares into a line or circle, each square would continue to change at the same rate, and the eponymous pattern would not appear. This raises questions around machine sentience: if a machine is sentient but not aware of how it is structured and will be perceived by human operators, how could it signal its sentience to us? <em>I CAN FEEL</em> is not something we expect from our telephone switchboard, and is hard to ignore.
+            It is important to consider that the system of oscillators is not aware of its own arrangement: if we rearranged the squares into a line or circle, each square would continue to change at the same rate, and the eponymous pattern would not appear. This raises questions around machine sentience: if a machine is sentient but not aware of how it is structured and will be perceived by human operators, how could it signal its sentience to us?
           </p>
         </div>
       </div>
@@ -153,6 +153,7 @@ export default {
   },
   mounted: function () {
     window.setInterval(this.tick, 1000)
+    window.addEventListener('scroll', this.icanfeelScrollListener)
   },
   methods: {
     resetICanFeel: function () {
@@ -160,6 +161,13 @@ export default {
     },
     tick: function () {
       this.t = (this.t + (1/600)) % 1
+    },
+    icanfeelScrollListener: function () {
+      var passed = this.$refs.icanfeel.$el.getBoundingClientRect().bottom < window.innerHeight;
+      if (passed) {
+        window.removeEventListener('scroll', this.icanfeelScrollListener)
+        this.$refs.icanfeel.animate()
+      }
     },
   }
 }

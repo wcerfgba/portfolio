@@ -23,19 +23,22 @@ export default {
     this.rescale()
     window.addEventListener('resize', this.rescale)
     this.ctx = this.$refs.canvas.getContext('2d')
-    this.animate()
+    this.animateOnce()
   },
   methods: {
     x: function (i) { return this.$refs.canvas.width * (i % this.n) / this.n },
     y: function (i) { return this.$refs.canvas.height * Math.floor(i / this.n) / this.n },
-    animate: function () {
+    animateOnce: function () {
       const w = this.$refs.canvas.width / this.n
       for (let i = 0; i < this.omega.length; i++) {
         this.theta[i] = (this.theta[i] + 1) % this.omega[i]
-        const c = 255 * Math.round(this.theta[i] / this.omega[i])
-        this.ctx.fillStyle = `rgb(${c}, ${c}, ${c})`
+        const on = 0.5 <= this.theta[i] / this.omega[i]
+        this.ctx.fillStyle = `hsl(0, 0%, ${on ? 100 : 0}%)`
         this.ctx.fillRect(this.x(i), this.y(i), w, w)
       }
+    },
+    animate: function () {
+      this.animateOnce()
       window.requestAnimationFrame(this.animate)
     },
     rescale: function () {
