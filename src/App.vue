@@ -18,7 +18,7 @@
             The piece is composed of a 13x13 grid of squares, each of which changes between black and white at a set rate. The frequency of each oscillator is chosen such that the grid will eventually produce every 13x13 black and white picture, before looping. This takes approximately 10<span class="superscript">409</span> years.
           </p>
           <p>
-            The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <span class="action" :style="color" @click="resetICanFeel">Click here</span> to reset the simulation to the beginning.
+            The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <button class="action" :style="color" @click="resetICanFeel">Click here</button> to reset the simulation to the beginning.
           </p>
           <p>
             simple algorithm, meaningless data, but embodies meaning to humans.
@@ -240,8 +240,15 @@ export default {
 }
 
 .action {
+  display: inline;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
   cursor: pointer;
-  user-select: none;
 }
 
 @media (min-width: 580px) {
