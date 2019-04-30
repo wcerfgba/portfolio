@@ -1,13 +1,13 @@
 <template>
   <div class="app">
-    <div class="slice">
-      <div class="big-red">
+    <div class="slice" :style="borders">
+      <div class="big-red" :style="background_100">
         <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
       </div>
     </div>
-    <div class="slice">
-      <div class="left">
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
         <i-can-feel ref="icanfeel"></i-can-feel>
       </div>
       <div class="right">
@@ -18,7 +18,7 @@
             The piece is composed of a 13x13 grid of squares, each of which changes between black and white at a set rate. The frequency of each oscillator is chosen such that the grid will eventually produce every 13x13 black and white picture, before looping. This takes approximately 10<span class="superscript">409</span> years.
           </p>
           <p>
-            The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <span class="action" @click="resetICanFeel">Click here</span> to reset the simulation to the beginning.
+            The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <span class="action" :style="color" @click="resetICanFeel">Click here</span> to reset the simulation to the beginning.
           </p>
           <p>
             simple algorithm, meaningless data, but embodies meaning to humans.
@@ -30,8 +30,8 @@
       </div>
     </div>
 
-    <div class="slice">
-      <div class="left">
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
         <gradient-resonance></gradient-resonance>
       </div>
       <div class="right">
@@ -47,8 +47,8 @@
       </div>
     </div>
 
-    <div class="slice">
-      <div class="left">
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
         <img src="./assets/arches-photo.jpg">
       </div>
       <div class="right">
@@ -67,8 +67,8 @@
       </div>
     </div>
 
-    <div class="slice">
-      <div class="left">
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
         <img src="./assets/monalisa-photo.png">
       </div>
       <div class="right">
@@ -82,8 +82,8 @@
       </div>
     </div>
 
-    <div class="slice">
-      <div class="left">
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
         <looking-for-work></looking-for-work>
       </div>
       <div class="right">
@@ -111,10 +111,53 @@ export default {
     GradientResonance,
     LookingForWork
   },
+  data: function () {
+    return {
+      t: 0.16666
+    }
+  },
+  computed: {
+    hue: function () {
+      return (300 + 90 * 2 * Math.abs(0.5 - this.t)) % 360
+    },
+    hsl_100: function () {
+      return `hsl(${this.hue}, 100%, 50%)`
+    },
+    hsl_2p5: function () {
+      return `hsl(${this.hue}, 100%, 95%)`
+    },
+    borders: function () {
+      return `
+        border-top: 1px solid ${this.hsl_100};
+        border-bottom: 1px solid ${this.hsl_100};
+      `
+    },
+    background_100: function () {
+      return `
+        background: ${this.hsl_100};
+      `
+    },
+    background_2p5: function () {
+      return `
+        background: ${this.hsl_2p5};
+      `
+    },
+    color: function () {
+      return `
+        color: ${this.hsl_100};
+      `
+    },
+  },
+  mounted: function () {
+    window.setInterval(this.tick, 1000)
+  },
   methods: {
     resetICanFeel: function () {
       this.$refs.icanfeel.reset()
-    }
+    },
+    tick: function () {
+      this.t = (this.t + (1/600)) % 1
+    },
   }
 }
 </script>
@@ -122,15 +165,13 @@ export default {
 <style scoped>
 .slice {
   height: 85vh;
-  border-top: 1px solid #f00;
-  border-bottom: 1px solid #f00;
   display: flex;
   flex-direction: column;
   margin: 2rem 0.5rem;
 }
 
 .slice:first-child {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .left, .right {
@@ -139,7 +180,6 @@ export default {
 }
 
 .left {
-  background: #fee;
   display: flex;
 }
 
@@ -171,7 +211,6 @@ export default {
 
 .big-red {
   color: #fcfcfc;
-  background: #f00;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,7 +241,6 @@ export default {
 
 .action {
   cursor: pointer;
-  color: #f00;
   user-select: none;
 }
 
