@@ -2,7 +2,7 @@
   <div class="app">
     <div class="slice" :style="borders">
       <div class="big-red" :style="background_100">
-        <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
+        <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
       </div>
     </div>
@@ -21,10 +21,13 @@
             The initial state of the oscillators has been chosen such that after approximately 60 seconds, the eponymous phrase <em>I CAN FEEL</em> appears in the image. <button class="action" :style="color" @click="resetICanFeel">Click here</button> to reset the simulation to the beginning.
           </p>
           <p>
-            simple algorithm, meaningless data, but embodies meaning to humans.
-              what delineates our own sentience?
-              how would we know if a machine is sentient?
-            
+            <em>I CAN FEEL</em> invites us to observe the chaotic output of a mathematical system and find something meaningful. A set of lights becomes a writing system, a phrase, an emotional self-recognition.
+          </p>
+          <p>
+            This meaningful image is just one shard in a vast library of meaningless arrangements of squares. As we continue to watch the piece, we can recognise smaller patterns in the pixels. One might consider what shapes our concept of 'meaning' to be so specific.
+          </p>
+          <p>
+            It is important to consider that the system of oscillators is not aware of its own arrangement: if we rearranged the squares into a line or circle, each square would continue to change at the same rate, and the eponymous pattern would not appear. This raises questions around machine sentience: if a machine is sentient but not aware of how it is structured and will be perceived by human operators, how could it signal its sentience to us? <em>I CAN FEEL</em> is not something we expect from our telephone switchboard, and is hard to ignore.
           </p>
         </div>
       </div>
@@ -73,7 +76,7 @@
       </div>
       <div class="right">
         <div class="right-inner">
-          <h2>Mona Lisa in Rectanges</h2>
+          <h2>Mona Lisa in Rectangles</h2>
           <span class="date">2019</span>
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
@@ -153,7 +156,7 @@ export default {
   },
   methods: {
     resetICanFeel: function () {
-      this.$refs.icanfeel.reset()
+      this.$refs.icanfeel.resetArt()
     },
     tick: function () {
       this.t = (this.t + (1/600)) % 1
@@ -225,7 +228,6 @@ export default {
 }
 
 .big-red span {
-  cursor: pointer;
   border-bottom: 1px dotted #fcfcfc;
 }
 

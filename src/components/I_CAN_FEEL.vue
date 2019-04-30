@@ -48,7 +48,7 @@ export default {
       this.$refs.outer.style.width = minParentDim + 'px'
       this.$refs.outer.style.height = minParentDim + 'px'
     },
-    reset: function () {
+    resetArt: function () {
       this.theta = [...phaseData.theta]
     }
   }
