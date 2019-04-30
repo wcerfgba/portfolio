@@ -173,6 +173,12 @@ export default {
   margin: 2rem 0.5rem;
 }
 
+@supports (-moz-appearance: meterbar) { 
+  .slice {
+    height: 480px;
+  }
+}
+
 .slice:first-child {
   margin-top: 1rem;
 }
