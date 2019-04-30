@@ -41,8 +41,12 @@
         <div class="right-inner">
           <h2>Gradient Resonance</h2>
           <span class="date">2019</span>
-          <p>Inspired by Bridget Riley's op art and the wallpapers in the confessionals of recent seasons of RuPaul's Drag Race, <em>Gradient Resonance</em> is an interactive op art piece. Move your cursor over or tap on the canvas to create a linear gradient from two full-saturation colours.</p>
-          <p>The resulting gradient is re-imposed on top of itself in a pattern. This creates an effect of different squares fading in from the top and bottom of the piece. The prominence of the effect will vary depending on the colours chosen for the gradient, and some interesting combinations have been highlighted on the piece.</p>
+          <p>
+            Inspired by Bridget Riley's op art and the wallpapers in the confessionals of recent seasons of RuPaul's Drag Race, <em>Gradient Resonance</em> is an interactive op art piece. Move your cursor over or tap on the canvas to create a linear gradient from two full-saturation colours.
+          </p>
+          <p>
+            The resulting gradient is re-imposed on top of itself in a pattern. This creates an effect of different squares fading in from the top and bottom of the piece. The prominence of the effect will vary depending on the colours chosen for the gradient, and some interesting combinations have been highlighted on the piece.
+          </p>
           <p>
             themes???
           </p>

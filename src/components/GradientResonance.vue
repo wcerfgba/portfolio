@@ -8,6 +8,7 @@
       <div class="point" style="left: 71.3%; top: 5.6%;"></div>
       <div class="point" style="left: 83.333%; top: 67.5%;"></div>
       <div class="point" style="left: 12.5%; top: 98.5%;"></div>
+      <div class="hues">{{ topHue }} -> {{ bottomHue }}</div>
     </div>
   </div>
 </template>
@@ -122,6 +123,13 @@ void main() {
 
 export default {
   name: 'GradientResonance',
+  data: function () {
+    return {
+      glslCanvas: null,
+      topHue: 0,
+      bottomHue: 0,
+    }
+  },
   methods: {
     rescale: function () {
       const minParentDim = Math.min(
@@ -132,10 +140,24 @@ export default {
       this.$refs.outer.style.height = minParentDim + 'px'
       this.$refs.canvas.width = minParentDim
       this.$refs.canvas.height = minParentDim
+    },
+    mouseListener: function (e) {
+      const mouse_xy = this.glslCanvas.uniforms.u_mouse.value
+      const mouse_res = this.glslCanvas.uniforms.u_resolution.value
+      const mouse_uv = [
+        mouse_xy[0] / mouse_res[0], 
+        mouse_xy[1] / mouse_res[1],
+      ]
+      this.topHue = (360 * mouse_uv[0]).toFixed(2)
+      this.bottomHue = ((360 * (mouse_uv[0] + mouse_uv[1])) % 360).toFixed(2)
     }
   },
   mounted: function () {
-    (new GlslCanvas(this.$refs.canvas)).load(frag)
+    this.glslCanvas = new GlslCanvas(this.$refs.canvas, {
+      fragmentString: frag
+    }, {
+      mouseListener: this.mouseListener
+    })
     this.rescale()
     window.addEventListener('resize', this.rescale)
   }
@@ -183,5 +205,15 @@ canvas {
   border-radius: 2px;
   margin-right: 2px;
   background: #fff;
+}
+
+.hues {
+  position: absolute;
+  font-size: 16px;
+  padding-left: 4px;
+  mix-blend-mode: difference;
+  color: #fff;
+  right: 0;
+  bottom: 0;
 }
 </style>
