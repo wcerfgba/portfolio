@@ -4,7 +4,6 @@
       <div class="big-red" :style="background_100">
         <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
-        <img src="./assets/bonsai.png" class="bonsai">
       </div>
     </div>
     <div class="slice" :style="borders">
