@@ -4,6 +4,7 @@
       <div class="big-red" :style="background_100">
         <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
+        <img src="./assets/bonsai.png" class="bonsai">
       </div>
     </div>
     <div class="slice" :style="borders">
@@ -27,7 +28,7 @@
             This meaningful image is just one shard in a vast library of meaningless arrangements of squares. As we continue to watch the piece, we can recognise smaller patterns in the pixels. One might consider what shapes our concept of 'meaning' to be so specific.
           </p>
           <p>
-            It is important to consider that the system of oscillators is not aware of its own arrangement: if we rearranged the squares into a line or circle, each square would continue to change at the same rate, and the eponymous pattern would not appear. This raises questions around machine sentience: if a machine is sentient but not aware of how it is structured and will be perceived by human operators, how could it signal its sentience to us?
+            It is important to consider that the system of oscillators is not aware of its own arrangement: if we rearranged the squares into a line or circle, each square would continue to change at the same rate, and the eponymous pattern would not appear. This raises questions around machine sentience: if a machine is sentient but not aware of how it is structured and perceived by human operators, how could it signal its sentience to us?
           </p>
         </div>
       </div>
@@ -45,10 +46,7 @@
             Inspired by Bridget Riley's op art and the wallpapers in the confessionals of recent seasons of RuPaul's Drag Race, <em>Gradient Resonance</em> is an interactive op art piece. Move your cursor over or tap on the canvas to create a linear gradient from two full-saturation colours.
           </p>
           <p>
-            The resulting gradient is re-imposed on top of itself in a pattern. This creates an effect of different squares fading in from the top and bottom of the piece. The prominence of the effect will vary depending on the colours chosen for the gradient, and some interesting combinations have been highlighted on the piece.
-          </p>
-          <p>
-            themes???
+            The gradient is re-imposed on top of itself in a pattern. As the gradient is translated with respect to itself, different segments of the squares blend in to the background. This creates an effect of squares fading in from the top and bottom of the piece. The prominence of the effect varies depending on the colours chosen for the gradient, and some interesting combinations have been highlighted. The hue values are displayed in the lower left, allowing the piece to be used as a tool for exploring colour interactions.
           </p>
         </div>
       </div>
@@ -56,19 +54,24 @@
 
     <div class="slice" :style="borders">
       <div class="left" :style="background_2p5">
-        <img src="./assets/arches-photo.jpg">
+        <div class="image-wrapper">
+          <img src="./assets/arches-photo.jpg">
+        </div>
       </div>
       <div class="right">
         <div class="right-inner">
-          <h2>Arches at Night in Leyland</h2>
+          <h2>Arches at Night</h2>
           <span class="date">2019</span>
           <p>
-            colour
-            'capitalism' looming over
-            light pollution
-            urban density
+            A composition of two photographs taken from a window in a Lancashire town one spring night.
+          </p>
+          <p>
+            The first photograph is a 20" exposure, yielding a very bright image that shows detail on the backs of the terraced houses from a dim red light, the teal from a frosted window on a more modern building.
+          <p>
+            The second photo is a 5" exposure, capturing the burnt colours of the sky, and the sharp, bright light of the McDonald's arches peering over the houses.
+          </p>
+          <p>
 
-            need to crop these
           </p>
         </div>
       </div>
@@ -269,6 +272,20 @@ export default {
   padding: 0;
   outline: none;
   cursor: pointer;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
 }
 
 @media (min-width: 580px) {
