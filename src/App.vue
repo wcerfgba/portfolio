@@ -70,7 +70,7 @@
             The second photo is a 5" exposure, capturing the burnt colours of the sky, and the sharp, bright light of the McDonald's arches peering over the houses.
           </p>
           <p>
-
+            The two photos have been stitched together, creating a primitive collage, which is one of the themes highlighted by the piece. The image consists of blocks of distinct textures and colours, embodying the visual aesthetic of collage. Likewise, the scene itself is a collage, with different elements in the shot having been constructed over a long period of time.
           </p>
         </div>
       </div>
