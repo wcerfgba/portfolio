@@ -62,23 +62,18 @@
           <h2>Arches at Night</h2>
           <span class="date">2019</span>
           <p>
-            A composition of two photographs taken from a window in a Lancashire town one spring night.
+            A composition of two photographs taken from a window in a Lancashire town one spring night. The first photograph is a 20" exposure, yielding a very bright image that shows detail on the backs of the terraced houses from a dim red light, the teal from a frosted window on a more modern building. The second photo is a 5" exposure, capturing the burnt colours of the sky, and the sharp, bright light of the McDonald's arches peering over the houses. The two photos have been stitched together, to capture both the realistic colours of the sky and the detail in the buildings only shown by a long exposure.
           </p>
           <p>
-            The first photograph is a 20" exposure, yielding a very bright image that shows detail on the backs of the terraced houses from a dim red light, the teal from a frosted window on a more modern building.
-          <p>
-            The second photo is a 5" exposure, capturing the burnt colours of the sky, and the sharp, bright light of the McDonald's arches peering over the houses.
-          </p>
-          <p>
-            The two photos have been stitched together, creating a primitive collage, just like this town. As time rolls on, it brings changes in technologies like lighting and building materials, but these advances happen faster than QWEQWEQWE
+            I enjoy the different textures and colours, like the wavy turquoise glass of the building on the left, and the red brickwork of the terraces to the right. The hard delineation of regions reminds me of collage.
           </p>
         </div>
       </div>
     </div>
 
-    <div class="slice" :style="borders">
+    <!-- <div class="slice" :style="borders">
       <div class="left" :style="background_2p5">
-        <img src="./assets/monalisa-photo.png">
+        <img src="./assets/monalisa.svg">
       </div>
       <div class="right">
         <div class="right-inner">
@@ -104,7 +99,7 @@
           <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
