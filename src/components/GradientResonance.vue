@@ -8,6 +8,7 @@
       <div class="point" style="left: 71.3%; top: 5.6%;"></div>
       <div class="point" style="left: 83.333%; top: 67.5%;"></div>
       <div class="point" style="left: 12.5%; top: 98.5%;"></div>
+      <div class="point" style="left: 46.1%; top: 95.27%;"></div>
       <div class="hues">{{ topHue }} -> {{ bottomHue }}</div>
     </div>
   </div>
