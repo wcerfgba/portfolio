@@ -146,7 +146,7 @@ export default {
 
 <style scoped>
 .slice {
-  height: 85vh;
+  height: 86vh;
   display: flex;
   flex-direction: column;
   margin: 2rem 0.5rem;
@@ -260,7 +260,7 @@ export default {
 
 @media (min-width: 580px) {
   .slice {
-    max-height: 85vh;
+    max-height: 86vh;
     height: 50vw;
     flex-direction: row;
     margin: 2.1rem;
@@ -284,6 +284,7 @@ export default {
   }
 
   .right-inner {
+    width: 100%;
     max-height: unset;
     column-width: unset;
   }
