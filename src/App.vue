@@ -70,36 +70,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="slice" :style="borders">
-      <div class="left" :style="background_2p5">
-        <img src="./assets/monalisa.svg">
-      </div>
-      <div class="right">
-        <div class="right-inner">
-          <h2>Mona Lisa in Rectangles</h2>
-          <span class="date">2019</span>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="slice" :style="borders">
-      <div class="left" :style="background_2p5">
-        <looking-for-work></looking-for-work>
-      </div>
-      <div class="right">
-        <div class="right-inner">
-          <h2>Looking for work</h2>
-          <span class="date">2019</span>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-          <p>Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things. Here i will say some things.</p>
-        </div>
-      </div>
-    </div> -->
   </div>
 </template>
 
@@ -213,7 +183,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0.5rem;
+  padding: 1.5rem;
 }
 
 .right-inner {
@@ -224,7 +194,12 @@ export default {
 
 .right-inner > * {
   margin: 0;
-  padding: 0.5rem;
+  padding: 0;
+}
+
+.right-inner > p {
+  margin: 1rem 0;
+  padding: 0;
 }
 
 .big-red {
@@ -247,6 +222,7 @@ export default {
 }
 
 .date {
+  display: block;
   color: #666;
 }
 

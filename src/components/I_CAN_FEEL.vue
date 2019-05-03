@@ -26,7 +26,6 @@ export default {
     window.addEventListener('resize', this.rescale)
     this.ctx = this.$refs.canvas.getContext('2d')
     this.animateOnce()
-    this.animating = true // Primed
   },
   methods: {
     x: function (i) { return this.$refs.canvas.width * (i % this.n) / this.n },
@@ -41,7 +40,6 @@ export default {
       }
     },
     animate: function () {
-      if (!this.animating) return
       this.animateOnce()
       window.requestAnimationFrame(this.animate)
     },
@@ -56,15 +54,8 @@ export default {
       this.$refs.outer.style.height = minParentDim + 'px'
     },
     resetArt: function () {
-      this.animating = false
-      this.$nextTick(() => {
-        this.theta = [...phaseData.theta]
-        this.omega = [...phaseData.omega]
-        this.$nextTick(() => {
-          this.animating = true
-          this.animate()
-        })
-      })
+      this.theta = [...phaseData.theta]
+      this.omega = [...phaseData.omega]
     }
   }
 }
