@@ -2,7 +2,7 @@
   <div class="app">
     <div class="slice" :style="borders">
       <div class="big-red" :style="background_100">
-        <p>I am a <span>multimedia artist</span> based in the <span>North West, United Kingdom</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
+        <p>I am a <span>multimedia artist</span> based in <span>North West England</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
       </div>
     </div>
@@ -65,7 +65,10 @@
             A composition of two photographs taken from a window in a Lancashire town one spring night. The first photograph is a 20" exposure, yielding a very bright image that shows detail on the backs of the terraced houses from a dim red light, the teal from a frosted window on a more modern building. The second photo is a 5" exposure, capturing the burnt colours of the sky, and the sharp, bright light of the McDonald's arches peering over the houses. The two photos have been stitched together, to capture both the realistic colours of the sky and the detail in the buildings only shown by a long exposure.
           </p>
           <p>
-            I enjoy the different textures and colours, like the wavy turquoise glass of the building on the left, and the red brickwork of the terraces to the right. The hard delineation of regions reminds me of collage.
+            The hard delineation of regions of different colours reminds me of collage, and this speaks to the history of the town. Over the last 200 years new buildings and businesses have cropped up, and each decade has left its imprint on the town, in the forms of buildings, lighting, and transport infrastructure. Each successive generation must fit around the existing institutions,and so developing our towns and cities gets increasing complex and difficult over time.
+          </p>
+          <p>
+            <a :style="color" href="https://flic.kr/p/TDPEXJ" target="_blank">Click here</a> to view the full-resolution image on Flickr.
           </p>
         </div>
       </div>
@@ -232,7 +235,7 @@ export default {
   top: -0.5em;
 }
 
-.action {
+.action, a, a:link, a:visited, a:hover, a:active {
   display: inline;
   border: none;
   background: none;
@@ -242,6 +245,7 @@ export default {
   padding: 0;
   outline: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .image-wrapper {
