@@ -1,11 +1,46 @@
 <template>
   <div class="app">
+
     <div class="slice" :style="borders">
       <div class="big-red" :style="background_100">
         <p>I am a <span>multimedia artist</span> based in <span>North West England</span>. My background is in computer science and software engineering. I love to create. I am primarily interested in works which raise questions about <span>sociotechnical systems</span>, and our relationships with ourselves, other people, and the <span>natural world</span>.</p>
         <p>Thanks for visiting.</p>
       </div>
     </div>
+
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
+        <div class="image-wrapper">
+          <img src="./assets/cctv-photo.jpg">
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-inner">
+          <h2>Tesco CCTV</h2>
+          <span class="date">2019</span>
+          <p>
+            <a :style="color" :href="require('./assets/cctv-full.jpg')" target="_blank">Click here</a> to view the full-resolution image.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slice" :style="borders">
+      <div class="left" :style="background_2p5">
+        <iframe style="height: 100%;" src="http://the-light-of-the.world/"></iframe>
+      </div>
+      <div class="right">
+        <div class="right-inner">
+          <h2>the-light-of-the.world</h2>
+          <span class="date">2019</span>
+          <p>TODO TALK ABOUT THIS</p>
+          <p>
+            <a :style="color" href="http://the-light-of-the.world/" target="_blank">Click here</a> to visit the website.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <div class="slice" :style="borders">
       <div class="left" :style="background_2p5">
         <i-can-feel ref="icanfeel"></i-can-feel>
@@ -68,11 +103,12 @@
             The hard delineation of regions of different colours reminds me of collage, and this speaks to the history of the town. Over the last 200 years new buildings and businesses have cropped up, and each decade has left its imprint on the town, in the forms of buildings, lighting, and transport infrastructure. Each successive generation must fit around the existing institutions,and so developing our towns and cities gets increasing complex and difficult over time.
           </p>
           <p>
-            <a :style="color" href="https://flic.kr/p/TDPEXJ" target="_blank">Click here</a> to view the full-resolution image on Flickr.
+            <a :style="color" :href="require('./assets/arches-full.jpg')" target="_blank">Click here</a> to view the full-resolution image.
           </p>
         </div>
       </div>
     </div>
+
   </div>
 </template>
 
