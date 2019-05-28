@@ -19,6 +19,9 @@
           <h2>Tesco CCTV</h2>
           <span class="date">2019</span>
           <p>
+            This is a photo of the side of a Tesco supermarket somewhere in North West England. Shot at 30mm, f/14, 1/320" exposure, ISO 400, and then digitally retouched.
+          </p>
+          <p>
             <a :style="color" :href="require('./assets/cctv-full.jpg')" target="_blank">Click here</a> to view the full-resolution image.
           </p>
         </div>
@@ -33,7 +36,9 @@
         <div class="right-inner">
           <h2>the-light-of-the.world</h2>
           <span class="date">2019</span>
-          <p>TODO TALK ABOUT THIS</p>
+          <p>
+            A self-describing interactive conceptual art piece. The website is loaded in an iframe and is live.
+          </p>
           <p>
             <a :style="color" href="http://the-light-of-the.world/" target="_blank">Click here</a> to visit the website.
           </p>
@@ -106,6 +111,12 @@
             <a :style="color" :href="require('./assets/arches-full.jpg')" target="_blank">Click here</a> to view the full-resolution image.
           </p>
         </div>
+      </div>
+    </div>
+
+    <div class="slice" :style="borders">
+      <div class="big-red" :style="background_100">
+        <p class="contact">wcerfgba at riseup dot net</p>
       </div>
     </div>
 
@@ -191,6 +202,7 @@ export default {
   margin: 2rem 0.5rem;
 }
 
+/* Fix slice height in shitty mobile Firefox. */
 @supports (-moz-appearance: meterbar) { 
   .slice {
     height: 480px;
@@ -296,6 +308,10 @@ export default {
   max-width: 100%;
   max-height: 100%;
   margin: auto;
+}
+
+.contact {
+  text-align: center;
 }
 
 @media (min-width: 580px) {
