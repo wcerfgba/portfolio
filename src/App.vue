@@ -30,7 +30,7 @@
 
     <div class="slice" :style="borders">
       <div class="left" :style="background_2p5">
-        <iframe style="height: 100%;" src="http://the-light-of-the.world/"></iframe>
+        <iframe style="height: 100%;" src="https://the-light-of-the.world/"></iframe>
       </div>
       <div class="right">
         <div class="right-inner">
@@ -40,7 +40,7 @@
             A self-describing interactive conceptual art piece. The website is loaded in an iframe and is live.
           </p>
           <p>
-            <a :style="color" href="http://the-light-of-the.world/" target="_blank">Click here</a> to visit the website.
+            <a :style="color" href="https://the-light-of-the.world/" target="_blank">Click here</a> to visit the website.
           </p>
         </div>
       </div>
